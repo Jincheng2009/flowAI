@@ -153,6 +153,8 @@ flow_auto_qc <- function(fcsfiles, remove_from = "all",
 
     filename_ext <- description(set[[i]])$FILENAME
     filename <- sub("^([^.]*).*", "\\1", filename_ext)
+    filename <- basename(filename)
+    samplename <- description(set[[i]])$`$FIL`
     if (html_report != FALSE) {
         reportfile <- paste0(getwd(), .Platform$file.sep, 
             ifelse(folder_results != FALSE, paste0(folder_results, .Platform$file.sep), ""),

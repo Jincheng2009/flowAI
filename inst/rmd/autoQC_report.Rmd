@@ -13,7 +13,7 @@ opts_chunk$set(fig.align='center', out.width='750px', dpi=200)  #out.width='750p
 
 ## FCS file information
 
-> Input file name: `r filename`    
+> Input file name: `r samplename`    
 > Number of events: `r as.integer(dim(set[[i]])[1])`
 
 ```{r, echo=FALSE, fig.height = 3}
